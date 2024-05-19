@@ -121,6 +121,7 @@ export async function getLatestPosts() {
   }
 }
 
+//Search Posts
 export async function searchPosts(query) {
   try {
     const posts = await databases.listDocuments(
@@ -132,6 +133,32 @@ export async function searchPosts(query) {
     if (!posts) throw new Error("Something went wrong");
 
     return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+// get User Posts
+export async function getUserPosts(userId) {
+  try {
+    const posts = await databases.listDocuments(
+      appwriteconfig.database,
+      appwriteconfig.videoCollectionId,
+      [Query.equal("users", userId)]
+    );
+
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+// Sign out
+export async function signOut() {
+  try {
+    const session = await account.deleteSession("current");
+
+    return session;
   } catch (error) {
     throw new Error(error);
   }
