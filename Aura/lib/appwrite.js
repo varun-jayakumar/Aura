@@ -71,6 +71,7 @@ export const signIn = async (email, password) => {
   }
 };
 
+// get Current User
 export const getCurrentUser = async () => {
   try {
     const currentAccount = await account.get();
@@ -90,3 +91,48 @@ export const getCurrentUser = async () => {
     console.log(Error);
   }
 };
+
+// Get all prosts for current user
+export const getAppPosts = async () => {
+  try {
+    const posts = await databases.listDocuments(
+      appwriteconfig.database,
+      appwriteconfig.videoCollectionId
+    );
+
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+// Fetch latest posts
+export async function getLatestPosts() {
+  try {
+    const posts = await databases.listDocuments(
+      appwriteconfig.database,
+      appwriteconfig.videoCollectionId,
+      [Query.orderDesc("$createdAt"), Query.limit(7)]
+    );
+
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+export async function searchPosts(query) {
+  try {
+    const posts = await databases.listDocuments(
+      appwriteconfig.database,
+      appwriteconfig.videoCollectionId,
+      [Query.search("title", query)]
+    );
+
+    if (!posts) throw new Error("Something went wrong");
+
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
