@@ -8,7 +8,7 @@ import { Link } from "expo-router";
 import { signIn } from "../../lib/appwrite";
 import { useGlobalContext } from "../../context/GlobalProvider";
 const SignIn = () => {
-  const { setUser, setIsLogged } = useGlobalContext;
+  const { setUser, setIsLoggedIn } = useGlobalContext();
   const [form, setForm] = useState({ email: "", password: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -21,7 +21,7 @@ const SignIn = () => {
 
     try {
       const result = await signIn(form.email, form.password);
-      setIsLogged(true);
+      setIsLoggedIn(true);
       router.replace("/home");
     } catch (error) {
       Alert.alert("Error", error.message);

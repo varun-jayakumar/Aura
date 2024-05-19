@@ -18,7 +18,7 @@ const VideoCard = ({ item }) => {
         <View className="justify-center items-center flex-row flex-1">
           <View className="w-[46px] h-[46px] rounded-lg border border-secondary justify-center flex items-center p-0.5 ">
             <Image
-              source={{ uri: item.users.avatar }}
+              source={{ uri: item?.users?.avatar }}
               className="h-full w-full rounded-lg"
               resize="cover"
             ></Image>
@@ -34,7 +34,7 @@ const VideoCard = ({ item }) => {
               className="text-xs text-gray-100 font-pregular"
               numberOfLines={1}
             >
-              {item.users.username}
+              {item?.users?.username}
             </Text>
           </View>
         </View>

@@ -11,7 +11,7 @@ import { useGlobalContext } from "../../context/GlobalProvider";
 const SignUp = () => {
   const [form, setForm] = useState({ email: "", password: "", username: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { setUser, setIsLogged } = useGlobalContext;
+  const { setUser, setIsLoggedIn } = useGlobalContext();
   const submit = async () => {
     if (!form.username || !form.email || !form.password) {
       Alert.alert("Validation Error", "please fill in all the fields");
@@ -21,7 +21,7 @@ const SignUp = () => {
     try {
       const result = await createUser(form.email, form.password, form.username);
       setUser(result);
-      setIsLogged(true);
+      setIsLoggedIn(true);
       // set it to global state with context
       router.replace("/home");
     } catch (error) {
