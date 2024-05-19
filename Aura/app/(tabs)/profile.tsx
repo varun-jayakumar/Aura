@@ -68,13 +68,7 @@ const Profile = () => {
                 title={posts.length || 0}
                 subtitle="Posts"
                 titleStyles="text-xl"
-                containerStyles="mr-10"
-              />
-              <InfoBox
-                title="1.2k"
-                subtitle="Followers"
-                titleStyles="text-xl"
-                containerStyles={""}
+                containerStyles=""
               />
             </View>
           </View>

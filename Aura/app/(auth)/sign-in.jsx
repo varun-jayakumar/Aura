@@ -21,8 +21,6 @@ const SignIn = () => {
 
     try {
       const result = await signIn(form.email, form.password);
-      console.log(result);
-      setUser(result);
       setIsLogged(true);
       router.replace("/home");
     } catch (error) {
