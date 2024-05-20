@@ -26,10 +26,10 @@ Backend Services: To handle video uploads, user authentication, and data managem
 ## App Screens:
 
 <p align="center">
-  <img src="WhatsApp Image 2024-05-19 at 17.28.17 (5).jpeg" width="400" />
-  <img src="WhatsApp Image 2024-05-19 at 17.28.17.jpeg" width="400" /> 
-  <img src="WhatsApp Image 2024-05-19 at 17.28.17 (4).jpeg" width="400" /> 
-  <img src="WhatsApp Image 2024-05-19 at 17.28.17 (3).jpeg" width="400" /> 
-  <img src="WhatsApp Image 2024-05-19 at 17.28.17 (1).jpeg" width="400" /> 
-  <img src="WhatsApp Image 2024-05-19 at 17.28.17 (2).jpeg" width="400" /> 
+  <img src="readme/image1.jpeg" width="400" />
+  <img src="readme/image2.jpeg" width="400" /> 
+  <img src="readme/image3.jpeg" width="400" /> 
+  <img src="readme/image4.jpeg" width="400" /> 
+  <img src="readme/image5.jpeg" width="400" /> 
+  <img src="readme/image6.jpeg" width="400" /> 
 </p>
