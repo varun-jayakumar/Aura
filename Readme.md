@@ -33,3 +33,7 @@ Backend Services: To handle video uploads, user authentication, and data managem
   <img src="readme/image5.jpeg" width="400" /> 
   <img src="readme/image6.jpeg" width="400" /> 
 </p>
+
+## Author
+
+- Author: Varun Jayakumar
