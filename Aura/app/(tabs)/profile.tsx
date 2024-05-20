@@ -26,7 +26,7 @@ const Profile = () => {
   return (
     <SafeAreaView className="bg-primary h-full">
       <FlatList
-        data={posts}
+        data={posts ?? []}
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => <VideoCard item={item} />}
         ListEmptyComponent={() => (
