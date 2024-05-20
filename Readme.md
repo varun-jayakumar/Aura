@@ -23,6 +23,10 @@ Technologies Used:
 React Native: For building the mobile application interface.
 Backend Services: To handle video uploads, user authentication, and data management.
 
+## Download App at (Android):
+
+https://expo.dev/artifacts/eas/dEyFuFVXcXY43E89r4kqLQ.apk
+
 ## App Screens:
 
 <p align="center">
